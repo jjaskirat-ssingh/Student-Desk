@@ -6,10 +6,12 @@ from django.views import generic
 from youtubesearchpython import VideosSearch
 import requests 
 import wikipedia
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'dashboard/home.html')
 
+@login_required
 def notes(request):
     if request.method == "POST":
         form = NotesForm(request.POST)
@@ -23,6 +25,7 @@ def notes(request):
     context = {'notes':notes, 'form':form}
     return render(request, 'dashboard/notes.html',context)
 
+@login_required
 def delete_note(request, pk=None):
     Notes.objects.get(id=pk).delete()
     return redirect("notes")

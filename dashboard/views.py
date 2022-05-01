@@ -159,3 +159,4 @@ def register(request):
         'form':form
     }
     return render(request, "dashboard/register.html", context)
+

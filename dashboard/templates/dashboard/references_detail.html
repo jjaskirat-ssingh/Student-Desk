@@ -9,17 +9,17 @@
         <div class="content-section p-0 mt-5">
 
             <div class="m-3">
-                <h2>{{notes.title}}</h2>
+                <h2>{{references.title}}</h2>
             </div>
 
             <div>
-            <a href="localhost:8000{{MEDIA_URL}}{{notes.file.url}}" target="_blank" class="btn btn-outline-warning">View</a>
+            <a href="localhost:8000{{MEDIA_URL}}{{references.file.url}}" target="_blank" class="btn btn-outline-warning">View</a>
            
-            <a href="localhost:8000{{MEDIA_URL}}{{notes.file.url}}" download class="btn btn-outline-info">Download</a>
+            <a href="localhost:8000{{MEDIA_URL}}{{references.file.url}}" download class="btn btn-outline-info">Download</a>
             </div>
             <hr class="p-0 m-0">
             <p class="description m-5 p-5">
-                {{notes.description}}
+                {{references.description}}
             </p>
             <hr>
         </div>

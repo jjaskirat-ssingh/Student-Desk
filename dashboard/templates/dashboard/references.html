@@ -1,0 +1,27 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for ref in references %}
+        <div class="col-md-3">
+            <a href="{% url 'ref-detail' ref.id %}">
+                <div class="card">
+                    <div class="card-header">{{ref.title}}</div>
+                    <div class="card-header">{{ref.subject}}</div>
+                    <div class="card-body">{{ref.description|slice:"0:100"}}</div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+        <br><br>
+
+    </div>
+</div>
+<br><br>
+
+
+{% endblock content %}

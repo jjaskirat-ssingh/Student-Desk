@@ -2,6 +2,7 @@ from os import link
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from . forms import *
+from . models import *
 from django.views import generic
 from youtubesearchpython import VideosSearch
 import requests 
@@ -14,9 +15,9 @@ def home(request):
 @login_required
 def notes(request):
     if request.method == "POST":
-        form = NotesForm(request.POST)
+        form = NotesForm(request.POST, request.FILES)
         if form.is_valid():
-            notes = Notes(user=request.user, title=request.POST['title'], description=request.POST['description'])
+            notes = Notes(user=request.user, title=request.POST['title'], description=request.POST['description'], file=request.FILES['file'])
             notes.save()
         messages.success(request, f"Notes Added by {request.user.username} successfully!")
     else:
@@ -163,3 +164,21 @@ def register(request):
     }
     return render(request, "dashboard/register.html", context)
 
+def references(request):
+    # if request.method == "POST":
+    #     form = ReferencesForm(request.POST, request.FILES)
+    #     if form.is_valid():
+    #         references = References(user=request.user, title=request.POST['title'], subject=request.POST['subject'], description=request.POST['description'], file=request.FILES['file'])
+    #         references.save()
+    #     messages.success(request, "Refernce material added successfully!")
+    # else:
+    #     form = ReferencesForm()
+    # references = ReferencesForm.objects.all()
+    # context = {'references':references, 'form':form}
+    references = References.objects.all()
+    context = {'references':references}
+    return render(request, 'dashboard/references.html',context)
+
+
+class ReferencesDetailView(generic.DetailView):
+    model = References

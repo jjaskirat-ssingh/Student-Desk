@@ -25,7 +25,7 @@
 </div>
 <br><br>
 <div class="container">
-    <form method="POST">
+    <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Create Notes</legend>

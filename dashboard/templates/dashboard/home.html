@@ -2,8 +2,13 @@
 {% load static %}
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 <div class="home-bg">
-  <h3>Welcome to Student Desk!</h3>
+  <div class='console-container'><span id='text'></span>
+    <div class='console-underscore' id='console'>&#95;</div>
+  </div>
+  <!-- <h3>Welcome to Student Desk!</h3> -->
 </div>
 
 <section class="container text-center">
@@ -112,7 +117,7 @@
   </div>
 
 
-
+  <script type="text/javascript" src="{% static 'js/welcome.js' %}"></script>
 
 
 </section>

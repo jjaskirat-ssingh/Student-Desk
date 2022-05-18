@@ -1,0 +1,10 @@
+
+.card {
+    margin: 1rem;
+    word-wrap: break-word;
+    /* background-color: #fff; */
+    /* background-clip: border-box; */
+    /* border: 1 solid transparent; */
+    /* border-radius: 2rem; */
+    box-shadow: 5px 5px 20px 0 rgba(51, 44, 41, 0.4);
+}

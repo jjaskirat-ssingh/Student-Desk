@@ -1,9 +1,10 @@
 {% extends 'dashboard/base.html' %} 
 {% load static %} 
 {% block content %}
-<section class='text-center container'>
+<link rel="stylesheet" href="{% static 'css/yt.css' %}">
+<section class='text-center container yt-heading'>
     <h2>Search Videos in Youtube</h2>
-    <p>search videos and select any video to open in youtube</p>
+    <p>Search videos and select any video to open in youtube</p>
     <form action="" method="post">
         {% csrf_token %}
         {{form}}

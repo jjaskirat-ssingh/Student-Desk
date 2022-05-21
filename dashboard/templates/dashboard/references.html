@@ -3,13 +3,15 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'css/ref.css' %}">
+
 <div class="container">
     <div class="row">
         {% for ref in references %}
         <div class="col-md-3">
             <a href="{% url 'ref-detail' ref.id %}">
                 <div class="card">
-                    <div class="card-header">{{ref.title}}</div>
+                    <div class="card-header header-text">{{ref.title}}</div>
                     <div class="card-header">{{ref.subject}}</div>
                     <div class="card-body">{{ref.description|slice:"0:100"}}</div>
                 </div>

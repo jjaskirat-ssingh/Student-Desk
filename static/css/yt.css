@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #05386b !important;
+}
+
+body {
+    background: #edf5e1;
+}
+
+.yt-heading h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.yt-heading p {
+    font-size: 1.5rem;
+}
+
+
+.card {
+    margin: 1rem;
+    word-wrap: break-word;
+    /* background-color: #fff; */
+    /* background-clip: border-box; */
+    /* border: 1 solid transparent; */
+    /* border-radius: 2rem; */
+    box-shadow: 5px 5px 20px 0 rgba(51, 44, 41, 0.4);
+}

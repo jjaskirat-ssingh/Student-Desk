@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet|Quicksand|Barlow");
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap');
+
 
 html {
     scroll-behavior: smooth;
@@ -101,16 +103,16 @@ a:hover {
     border: none;
     color: white;
 }
-/* 
-.card img {
+
+/* .card img {
     height: 210px;
 } */
 
-/* .card:hover {
+ .card:hover {
     opacity: 0.9;
     transform: scale(1.02);
     transition: 0.5s ease;
-} */
+} 
 
 html,
 body {
@@ -207,4 +209,24 @@ footer .column a+a {
 
 .account-heading {
     font-size: 2.5rem;
+}
+
+
+.navbar {
+    background-color: #05386b !important;
+}
+
+.navbar-brand {
+    font-family: 'Arvo';
+    font-size: 1.5rem;
+}
+
+body{
+    background: #edf5e1;
+    /* margin-top:20px; */
+}
+
+.text-center h2 {
+    font-weight: bold;
+    font-size: 3rem;
 }

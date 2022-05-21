@@ -3,16 +3,19 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'css/notes.css' %}">
+
 <div class="container">
     <div class="row">
         {% for note in notes %}
         <div class="col-md-3">
             <a href="{% url 'notes-detail' note.id %}">
                 <div class="card">
-                    <div class="card-header">{{note.title}}</div>
+                    <div class="card-header header-text">{{note.title}}</div>
                     <div class="card-body">{{note.description|slice:"0:100"}}</div>
                     <div class="card-footer mt-auto "><a href="{% url 'delete-note' note.id %}">
-                        <i class="fa fa-trash fa-2x"></i></a>
+                        <div class="img-container">
+                        <i class="fa fa-trash fa-2x"></i></div></a>
                     </div>
                 </div>
             </a>
